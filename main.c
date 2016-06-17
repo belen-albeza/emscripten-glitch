@@ -31,6 +31,7 @@ SDL_Surface* load_image(char *filename) {
             fprintf(stderr, "Unable to optimize image %s - %s", filename,
                 SDL_GetError());
         }
+        SDL_SetSurfaceBlendMode(optimized, SDL_BLENDMODE_BLEND);
     }
     return optimized;
 }
